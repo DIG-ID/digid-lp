@@ -1,7 +1,7 @@
 // webpack.mix.js
 
 let mix = require('laravel-mix');
-          require('laravel-mix-purgecss');
+          //require('laravel-mix-purgecss');
 
 mix
   .setPublicPath('dist')
@@ -11,7 +11,7 @@ mix
   })
   .js('assets/js/main.js', 'dist')
   .sass('assets/sass/main.sass', 'dist')
-  .purgeCss()
+  //.purgeCss()
   .disableNotifications()
   .browserSync({
     proxy: "localhost/digid-lp",
