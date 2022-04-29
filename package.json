@@ -33,6 +33,7 @@
     "sass-loader": "^12.1.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.1.3"
   }
 }
