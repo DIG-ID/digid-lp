@@ -9,8 +9,8 @@ mix
   .autoload({
     jquery: ['$', 'window.jQuery']
   })
-  .js('src/js/main.js', 'dist')
-  .sass('src/sass/main.sass', 'dist')
+  .js('assets/js/main.js', 'dist')
+  .sass('assets/sass/main.sass', 'dist')
   .purgeCss()
   .disableNotifications()
   .browserSync({
