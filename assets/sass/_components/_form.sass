@@ -1,0 +1,67 @@
+.wpcf7
+  p
+    .wpcf7-form-control-wrap
+      display: block
+      input[type='text'],
+      input[type='email'],
+      textarea
+        width: 100%
+        max-width: 100%
+        padding: 20px 30px
+        border-radius: 7px
+        border: none
+        background-color: #FFFFFF
+        font-weight: 500
+        font-size: 14px
+        letter-spacing: -0.51px
+        color: #1F1F1F
+        transition: all .3s ease-in-out
+        &:placeholder
+          font-weight: 500
+          font-size: 14px
+          letter-spacing: -0.51px
+          color: $text-color
+
+        &:focus-visible
+          outline: none
+        &:active,
+        &:focus
+          background-color: #fff
+          //border-color: $primary-color
+      .wpcf7-not-valid-tip
+        margin-top: 10px
+        font-size: 14px
+        font-weight: bold
+        //font-family: $roboto
+
+
+  input[type='submit']
+    @extend %button-text
+    text-transform: uppercase
+    padding: 20px 55px
+    border-radius: 30px
+    border: 1px solid transparent
+    background-color: $accent-color
+    box-shadow: 0px 9px 30px #1FCCB740
+    transition: all .3s ease-in-out
+    text-align: center
+    display: block
+    &:hover
+      background-color: #199986
+      box-shadow: 0px 9px 30px #1FCCB740
+    &:active
+      border: 1px solid $accent-color
+      color: $accent-color
+      background-color: white
+      box-shadow: none
+  .wpcf7-spinner
+    display: block
+  .wpcf7-response-output
+    border-radius: 7px
+    font-size: 14px
+    //font-family: $roboto
+    padding: 10px 20px
+    margin: 20px 0px
+  form.invalid
+    .wpcf7-response-output
+      background-color: #ffb900
