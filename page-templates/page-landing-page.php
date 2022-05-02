@@ -8,7 +8,7 @@ if ( $lp_content ) :
 ?>
 <div class="container-fluid">
 	<div class="row">
-		<div class="box-wrapper col-6 d-flex justify-content-center align-items-stretch h-100 min-vh-100 animate__animated animate__fadeInLeft">
+		<div class="box-wrapper col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-stretch h-100 min-vh-100 animate__animated animate__fadeInLeft">
 			<div class="box-content d-flex flex-column justify-content-between">
 				<header class="box-header">
 					<div class="site-logo">
@@ -41,7 +41,7 @@ if ( $lp_content ) :
 				</footer>
 			</div>
 		</div>
-		<div class="box-wrapper box-wrapper--image col-6 d-flex justify-content-end align-items-start h-100 min-vh-100 animate__animated animate__fadeInRight">
+		<div class="box-wrapper box-wrapper--image col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-end align-items-start h-100 min-vh-100 animate__animated animate__fadeInRight">
 			<p class="text-right">
 				Forward<br>
 				Thinking<br>

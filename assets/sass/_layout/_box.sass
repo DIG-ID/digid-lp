@@ -1,5 +1,5 @@
 .box-wrapper
-  padding: 100px 150px
+  padding: 4% 6%
   &--image
     background-color: #ffffff
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),url('../../images/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg')
@@ -20,7 +20,7 @@
     width: 78px
   h1
     @extend %title-text
-    margin-bottom: 30px
+    margin-bottom: 20px
   p
     @extend %body-text
     width: 90%
@@ -30,7 +30,7 @@
     text-decoration: none
     text-transform: uppercase
     border: 1px solid transparent
-    padding: 15px 70px
+    padding: 13px 70px
     border-radius: 30px
     background-color: #E33959
     box-shadow: 0px 9px 26px rgba(227, 57, 89, 0.3)
@@ -57,12 +57,13 @@
       svg
         width: 20px
         margin-top: 5px
-        margin-right: 20px
+        margin-right: 10px
         fill: #1FCCB7
       a
         @extend %link-text
         text-decoration: none
         transition: all .3s ease-in-out
+        white-space: nowrap
         &:hover
           text-decoration: underline
       p
@@ -73,6 +74,19 @@
 .admin-bar .box-wrapper
   min-height: calc(100vh - 32px) !important
   height: calc(100% - 32px) !important
+
+
+@include media-breakpoint-down(xxl)
+  .box-footer
+    .contacts
+      li
+        a, p
+          font-size: 16px
+
+@include media-breakpoint-down(lg)
+  .box-footer
+    .contacts
+      flex-direction: column
 
 @include media-breakpoint-down(md)
   .admin-bar .box-wrapper
