@@ -1,0 +1,80 @@
+.box-wrapper
+  padding: 100px 150px
+  &--image
+    background-color: #ffffff
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),url('../../images/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg')
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    p
+      text-align: right
+      @extend %slogan
+
+.box-header
+  display: flex
+  justify-content: space-between
+
+.box-content
+  img
+    max-width: 100%
+    width: 78px
+  h1
+    @extend %title-text
+    margin-bottom: 30px
+  p
+    @extend %body-text
+    width: 90%
+    margin-bottom: 30px
+  .btn
+    @extend %button-text
+    text-decoration: none
+    text-transform: uppercase
+    border: 1px solid transparent
+    padding: 15px 70px
+    border-radius: 30px
+    background-color: #E33959
+    box-shadow: 0px 9px 26px rgba(227, 57, 89, 0.3)
+    transition: all .3s ease-in-out
+    &:hover
+      background-color: #B22F4B
+      box-shadow: 0px 9px 26px #E339594D
+    &:active
+      border: 1px solid #E33959
+      color: #E33959
+      background-color: white
+      box-shadow: none
+
+.box-footer
+  .contacts
+    padding: 0
+    margin: 0
+    list-style: none
+    display: flex
+    justify-content: space-between
+    li
+      display: flex
+      align-items: flex-start
+      svg
+        width: 20px
+        margin-top: 5px
+        margin-right: 20px
+        fill: #1FCCB7
+      a
+        @extend %link-text
+        text-decoration: none
+        transition: all .3s ease-in-out
+        &:hover
+          text-decoration: underline
+      p
+        @extend %link-text
+        margin: 0
+        white-space: nowrap
+
+.admin-bar .box-wrapper
+  min-height: calc(100vh - 32px) !important
+  height: calc(100% - 32px) !important
+
+@include media-breakpoint-down(md)
+  .admin-bar .box-wrapper
+    min-height: calc(100vh - 46px) !important
+    height: calc(100% - 46px) !important
