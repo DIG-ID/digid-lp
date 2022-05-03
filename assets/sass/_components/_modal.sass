@@ -38,6 +38,25 @@
   opacity: 1
   pointer-events: auto
 
-@include media-breakpoint-down(sm)
-  .modal-window
+.full-page .modal-window
+  display: none
+  visibility: hidden
+  opacity: 0
+  pointer-events: none
+
+@include media-breakpoint-down(md)
+  .full-page .modal-window
     position: absolute
+    display: block
+    visibility: visible
+    opacity: 1
+    pointer-events: auto
+    background: rgba(32, 39, 38, 0.4)
+    backdrop-filter: blur( 30px )
+    .modal-container
+      width: 100%
+      padding: 0 30px
+    .modal-close
+      svg
+       fill: #ffffff
+
