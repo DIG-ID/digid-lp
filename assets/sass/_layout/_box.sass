@@ -6,7 +6,7 @@
     background-size: cover
     background-position: center center
     background-repeat: no-repeat
-    p
+    .slogan
       text-align: right
       @extend %slogan
 
@@ -15,16 +15,23 @@
   justify-content: space-between
 
 .box-content
-  img
-    max-width: 100%
-    width: 78px
-  h1
+  .site-logo
+    img
+      max-width: 100%
+      width: 78px
+  .title
     @extend %title-text
     margin-bottom: 20px
-  p
+  .description
     @extend %body-text
     width: 90%
     margin-bottom: 30px
+  .slogan
+    @extend %slogan
+    font-size: 12px
+    line-height: 11px
+    text-align: right
+    margin-top: 10px
   .btn
     @extend %button-text
     text-decoration: none
@@ -84,11 +91,50 @@
           font-size: 16px
 
 @include media-breakpoint-down(lg)
-  .box-footer
-    .contacts
-      flex-direction: column
+  .box-wrapper
+    width: 100%
+    &--content
+      position: relative
+      height: auto !important
+      min-height: auto !important
+      .full-page
+        display: flex
+        flex-direction: column
+        min-height: 100vh
+        height: 100%
+        .box-content
+          display: flex
+          flex-direction: column
+          flex-grow: 1
+          justify-content: center
+          h1
+            margin-bottom: 40px
+          p
+            margin-bottom: 40px
+          .btn
+            display: block
+            width: 100%
+            text-align: center
+            margin: 0 auto
+            white-space: nowrap
+            padding: 13px 0px
 
 @include media-breakpoint-down(md)
   .admin-bar .box-wrapper
     min-height: calc(100vh - 46px) !important
     height: calc(100% - 46px) !important
+
+@include media-breakpoint-down(sm)
+  .box-content
+    h1
+      font-size: 46px
+      line-height: 46px
+    p
+      font-size: 14px
+
+  .box-footer
+    .contacts
+      flex-direction: column
+      li
+        margin-bottom: 20px
+        

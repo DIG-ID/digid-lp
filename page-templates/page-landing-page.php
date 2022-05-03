@@ -8,21 +8,31 @@ if ( $lp_content ) :
 ?>
 <div class="container-fluid">
 	<div class="row">
-		<div class="box-wrapper col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-stretch h-100 min-vh-100 animate__animated animate__fadeInLeft">
+		<div class="box-wrapper box-wrapper--content col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-stretch h-100 min-vh-100 animate__animated animate__fadeInLeft">
 			<div class="box-content d-flex flex-column justify-content-between">
-				<header class="box-header">
-					<div class="site-logo">
-						<?php if ( has_custom_logo() ) : ?>
-							<?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' ); ?>
-						<?php endif; ?>
-					</div>
-					<?php do_action( 'wpml_add_language_selector' ); ?>
-				</header>
-				<main class="box-content">
-					<h1 class=""><?php echo esc_html( $lp_content['title'] ); ?></h1>
-					<p class=""><?php echo wp_kses_post( $lp_content['description'] ); ?></p>
-					<a href="#" class="btn d-inline-block modal-open"><?php echo esc_html( $lp_content['contact_button_text'] ); ?></a>
-				</main>
+				<div class="full-page">
+					<header class="box-header">
+						<div class="site-logo">
+							<?php if ( has_custom_logo() ) : ?>
+								<?php echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' ); ?>
+							<?php endif; ?>
+						</div>
+						<div class="header-extras d-flex flex-column align-items-end">
+							<p class="slogan text-nowrap text-right d-sm-block d-md-block d-lg-none">
+								Forward<br>
+								Thinking<br>
+								Marketing<br>
+								Solutions
+							</p>
+							<?php do_action( 'wpml_add_language_selector' ); ?>
+						</div>
+					</header>
+					<main class="box-content">
+						<h1 class="title"><?php echo esc_html( $lp_content['title'] ); ?></h1>
+						<p class="description"><?php echo wp_kses_post( $lp_content['description'] ); ?></p>
+						<a href="#" class="btn d-inline-block modal-open"><?php echo esc_html( $lp_content['contact_button_text'] ); ?></a>
+					</main>
+				</div>
 				<footer class="box-footer">
 					<ul class="contacts">
 						<li>
@@ -42,7 +52,7 @@ if ( $lp_content ) :
 			</div>
 		</div>
 		<div class="box-wrapper box-wrapper--image col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-end align-items-start h-100 min-vh-100 animate__animated animate__fadeInRight">
-			<p class="text-right">
+			<p class="slogan text-right d-none d-sm-none d-md-none d-lg-block">
 				Forward<br>
 				Thinking<br>
 				Marketing<br>
