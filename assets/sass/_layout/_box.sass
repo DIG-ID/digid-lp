@@ -1,5 +1,6 @@
 .box-wrapper
   padding: 4% 6%
+  position: relative
   &--image
     background-color: #ffffff
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),url('../../images/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg')
@@ -19,17 +20,20 @@
 .box-header
   display: flex
   justify-content: space-between
+  transition: all .3s ease-in-out
 
 .box-content
-  display: flex
-  flex-direction: column
-  align-items: flex-start
-  justify-content: center
-  flex-grow: 1
   .site-logo
     img
       max-width: 100%
       width: 78px
+  .box-main-content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    flex-grow: 1
+    transition: all .3s ease-in-out
   .title
     @extend %title-text
     margin-bottom: 20px
@@ -115,7 +119,7 @@
       .full-page
         min-height: 100vh
         height: 100%
-        .box-content
+        .box-main-content
           display: flex
           flex-direction: column
           flex-grow: 1
@@ -138,7 +142,7 @@
     height: calc(100% - 46px) !important
 
 @include media-breakpoint-down(sm)
-  .box-content
+  .box-main-content
     .title
       font-size: 38px
       line-height: 38px

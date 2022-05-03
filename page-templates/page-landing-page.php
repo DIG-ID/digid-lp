@@ -10,7 +10,7 @@ if ( $lp_content ) :
 	<div class="row">
 		<div class="box-wrapper box-wrapper--content col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-stretch h-100 min-vh-100 animate__animated animate__fadeInLeft">
 			<div class="box-content d-flex flex-column justify-content-between">
-				<div class="full-page align-items-stretch">
+				<div class="full-page">
 					<header class="box-header">
 						<div class="site-logo">
 							<?php if ( has_custom_logo() ) : ?>
@@ -27,7 +27,7 @@ if ( $lp_content ) :
 							<?php do_action( 'wpml_add_language_selector' ); ?>
 						</div>
 					</header>
-					<main class="box-content">
+					<main class="box-main-content">
 						<h1 class="title"><?php echo esc_html( $lp_content['title'] ); ?></h1>
 						<p class="description"><?php echo wp_kses_post( $lp_content['description'] ); ?></p>
 						<a href="#" class="btn d-inline-block modal-open"><?php echo esc_html( $lp_content['contact_button_text'] ); ?></a>
