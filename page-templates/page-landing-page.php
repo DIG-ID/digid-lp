@@ -10,7 +10,7 @@ if ( $lp_content ) :
 	<div class="row">
 		<div class="box-wrapper box-wrapper--content col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-stretch h-100 min-vh-100 animate__animated animate__fadeInLeft">
 			<div class="box-content d-flex flex-column justify-content-between">
-				<div class="full-page">
+				<div class="full-page align-items-stretch">
 					<header class="box-header">
 						<div class="site-logo">
 							<?php if ( has_custom_logo() ) : ?>
