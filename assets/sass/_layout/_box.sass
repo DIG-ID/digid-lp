@@ -1,12 +1,24 @@
 .box-wrapper
   padding: 4% 6%
   position: relative
+
   &--image
-    background-color: #ffffff
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),url('../../images/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg')
-    background-size: cover
-    background-position: center center
-    background-repeat: no-repeat
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #ffffff
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),url('../../images/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg')
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+      //filter: blur(3px)
+      transition: all 0.3s ease-in-out
     .slogan
       text-align: right
       @extend %slogan
@@ -16,6 +28,10 @@
       display: flex
       flex-direction: column
       flex-grow: 1
+
+.box-wrapper--image.active
+  &::before
+    filter: blur(3px)
 
 .box-header
   display: flex
