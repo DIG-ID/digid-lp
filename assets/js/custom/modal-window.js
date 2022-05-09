@@ -18,8 +18,9 @@ $(function() {
     blurObjects.removeClass('filter-blur');
   });
 
-  $(window).on( 'click', function(e) {
-    if (e.target == modal) {
+  $(document).on('mouseup', function(e) {
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!modal.is(e.target) && modal.has(e.target).length === 0) {
       modal.removeClass('active');
       blurBG.removeClass('active');
       blurObjects.removeClass('filter-blur');
