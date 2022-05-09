@@ -30,16 +30,16 @@
   .box-main-content
     display: flex
     flex-direction: column
-    align-items: flex-start
-    justify-content: center
     flex-grow: 1
+    justify-content: center
+    align-items: flex-start
     transition: all .3s ease-in-out
   .title
     @extend %title-text
     margin-bottom: 20px
   .description
     @extend %body-text
-    width: 90%
+    width: 80%
     margin-bottom: 30px
   .slogan
     @extend %slogan
@@ -54,6 +54,9 @@
     border: 1px solid transparent
     padding: 13px 70px
     border-radius: 30px
+    display: inline-block
+    width: 320px
+    text-align: center
     background-color: #E33959
     box-shadow: 0px 9px 26px rgba(227, 57, 89, 0.3)
     transition: all .3s ease-in-out
