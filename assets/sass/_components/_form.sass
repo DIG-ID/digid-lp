@@ -2,39 +2,39 @@
   p
     position: relative
     margin-top: 20px
-    .wpcf7-form-control-wrap
-      display: block
-      input[type='text'],
-      input[type='email'],
-      textarea
-        width: 100%
-        max-width: 100%
-        padding: 20px 30px
-        border-radius: 0px
-        border: none
-        background-color: #FFFFFF
+  .wpcf7-form-control-wrap
+    display: block
+    input[type='text'],
+    input[type='email'],
+    textarea
+      width: 100%
+      max-width: 100%
+      padding: 20px 30px
+      border-radius: 0px
+      border: none
+      background-color: #FFFFFF
+      font-weight: 500
+      font-size: 14px
+      letter-spacing: -0.51px
+      color: #1F1F1F
+      transition: all .3s ease-in-out
+      &:placeholder
         font-weight: 500
         font-size: 14px
         letter-spacing: -0.51px
-        color: #1F1F1F
-        transition: all .3s ease-in-out
-        &:placeholder
-          font-weight: 500
-          font-size: 14px
-          letter-spacing: -0.51px
-          color: $text-color
+        color: $text-color
 
-        &:focus-visible
-          outline: none
-        &:active,
-        &:focus
-          background-color: #fff
-          //border-color: $primary-color
-      .wpcf7-not-valid-tip
-        margin-top: 10px
-        font-size: 14px
-        font-weight: bold
-        //font-family: $roboto
+      &:focus-visible
+        outline: none
+      &:active,
+      &:focus
+        background-color: #fff
+        //border-color: $primary-color
+    .wpcf7-not-valid-tip
+      margin-top: 10px
+      font-size: 14px
+      font-weight: bold
+      //font-family: $roboto
 
 
   input[type='submit']
@@ -72,6 +72,10 @@
   form.invalid
     .wpcf7-response-output
       background-color: #ffb900
+  form.sent
+    .wpcf7-response-output
+      background-color: #46b450
+      color: #fff
 
 @include media-breakpoint-down(sm)
   .wpcf7

@@ -50,7 +50,7 @@ function diglp_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'diglp_theme_enqueue_styles' );
 
-
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 if ( ! function_exists( 'diglp_get_font_face_styles' ) ) :
 
